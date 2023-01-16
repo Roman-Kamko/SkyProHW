@@ -152,7 +152,7 @@ public class CyclePart2 {
         int friday = 3;
 
         for (int date = 1; date <= 31; date++) {
-            if ((date - friday + 7) % 7 == 0) {
+            if (date % 7 == friday) {
                 System.out.println("Сегодня пятница, " + date + "-е число. Необходимо подготовить отчет");
             }
         }
@@ -173,8 +173,8 @@ public class CyclePart2 {
         System.out.println("Задание 8");
         int from = 2023 - 200;
         int to = 2023 + 100;
-        for (int year = 0; year <= to; year++) {
-            if (year >= from && year % 79 == 0) {
+        for (int year = 0; year <= to; year += 79) {
+            if (year >= from) {
                 System.out.println(year);
             }
         }
