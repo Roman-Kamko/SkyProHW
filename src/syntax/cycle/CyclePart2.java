@@ -149,12 +149,10 @@ public class CyclePart2 {
         по разным датам.*/
         System.out.println("Задание 7");
 
-        int friday = 3;
+        int firstFriday = 3;
 
-        for (int date = 1; date <= 31; date++) {
-            if (date % 7 == friday) {
-                System.out.println("Сегодня пятница, " + date + "-е число. Необходимо подготовить отчет");
-            }
+        for (int date = firstFriday; date <= 31; date += 7) {
+            System.out.println("Сегодня пятница, " + date + "-е число. Необходимо подготовить отчет");
         }
     }
 
@@ -171,8 +169,11 @@ public class CyclePart2 {
         1975
         2054*/
         System.out.println("Задание 8");
-        int from = 2023 - 200;
-        int to = 2023 + 100;
+
+        int currentYear = 2023;
+        int from = currentYear - 200;
+        int to = currentYear + 100;
+
         for (int year = 0; year <= to; year += 79) {
             if (year >= from) {
                 System.out.println(year);
