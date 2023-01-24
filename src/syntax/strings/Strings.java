@@ -48,7 +48,7 @@ public class Strings {
         Выведите результат программы в консоль в формате: ”Данные ФИО сотрудника — ...”*/
 
         String fullName = "Иванов Семён Семёнович";
-        fullName = fullName.replace("ё", "е");
+        fullName = fullName.replace('ё', 'е');
         System.out.println(fullName);
     }
 }
