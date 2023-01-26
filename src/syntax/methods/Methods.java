@@ -7,10 +7,10 @@ public class Methods {
         /*Реализуйте метод, который получает в качестве параметра год, проверяет, является ли он високосным, и выводит
         результат в консоль.*/
         int year = 2100;
-        checkYear(year);
+        printInfoAboutYear(year);
     }
 
-    public static void checkYear(int year) {
+    public static void printInfoAboutYear(int year) {
         if (year % 4 == 0 && year % 100 != 0 || year % 400 == 0) {
             System.out.println(year + " год является високосным");
         } else {
@@ -28,10 +28,10 @@ public class Methods {
         и для какой ОС (Android или iOS) установить пользователю.*/
         int clientDeviceYear = 2022;
         int clientOS = 1;
-        checkDevice(clientOS, clientDeviceYear);
+        printInfoAboutClientVersion(clientOS, clientDeviceYear);
     }
 
-    public static void checkDevice(int deviceOS, int deviceYear) {
+    public static void printInfoAboutClientVersion(int deviceOS, int deviceYear) {
         int currentYear = LocalDate.now().getYear();
         if (deviceOS == 1) {
             if (deviceYear < currentYear) {
@@ -52,7 +52,7 @@ public class Methods {
         /*Ваша задача — доработать код, а именно написать метод, который на вход
         принимает дистанцию и возвращает итоговое количество дней доставки.*/
         int deliveryDistance = 60;
-        int deliveryDays = getDays(deliveryDistance);
+        int deliveryDays = numDays(deliveryDistance);
 
         if (deliveryDays == 0) {
             System.out.println("Свыше 100 км доставки нет");
@@ -61,7 +61,7 @@ public class Methods {
         }
     }
 
-    public static int getDays(int distance) {
+    public static int numDays(int distance) {
         int days = 0;
         if (distance < 20) {
             days++;
